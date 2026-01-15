@@ -9,6 +9,15 @@ A feature-rich, end-to-end Todo application built with a modern decoupled archit
 
 ---
 
+## 🌟 Key Features
+
+* **✨ Full CRUD Support**: Seamlessly create, read, update, and delete tasks with real-time state updates.
+* **🔍 Dynamic Filtering**: Quickly toggle between *All*, *Pending*, and *Completed* tasks to stay organized.
+* **📱 Responsive UI**: A mobile-first design built with Bootstrap, ensuring a smooth experience on desktops, tablets, and smartphones.
+* **🛡️ Error Handling**: Robust backend validation with standardized API error responses and user-friendly frontend alerts.
+
+---
+
 ## 🏗️ Architecture Overview
 
 The application follows a standard client-server model:
@@ -111,15 +120,6 @@ The API expects and returns data in the following JSON format:
   "createdAt": "2024-05-20T10:00:00"
 }
 ```
-
----
-
-## 🌟 Key Features
-
-* **✨ Full CRUD Support**: Seamlessly create, read, update, and delete tasks with real-time state updates.
-* **🔍 Dynamic Filtering**: Quickly toggle between *All*, *Pending*, and *Completed* tasks to stay organized.
-* **📱 Responsive UI**: A mobile-first design built with Bootstrap, ensuring a smooth experience on desktops, tablets, and smartphones.
-* **🛡️ Error Handling**: Robust backend validation with standardized API error responses and user-friendly frontend alerts.
 
 ---
 
