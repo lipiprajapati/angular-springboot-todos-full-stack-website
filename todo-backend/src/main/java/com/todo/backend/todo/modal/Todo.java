@@ -8,15 +8,15 @@ import org.springframework.stereotype.Component;
 public class Todo {
 	private long id;
 	private String username;
-	private String discription;
+	private String description;
 	private Date targetDate;
 	private boolean isDone;
 	
-	public Todo(long id, String username, String discription, Date targetDate, boolean isDone) {
+	public Todo(long id, String username, String description, Date targetDate, boolean isDone) {
 		super();
 		this.id = id;
 		this.username = username;
-		this.discription = discription;
+		this.description = description;
 		this.targetDate = targetDate;
 		this.isDone = isDone;
 	}
@@ -33,12 +33,12 @@ public class Todo {
 		this.username = username;
 	}
 
-	public String getDiscription() {
-		return discription;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDiscription(String discription) {
-		this.discription = discription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Date getTargetDate() {
