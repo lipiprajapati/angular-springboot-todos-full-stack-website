@@ -1,10 +1,10 @@
-package com.todo.backend.todo.controller;
+package com.todo.backend.controller;
 
 import java.net.URI;
 import java.util.List;
 
-import com.todo.backend.todo.service.impl.TodoServiceImpl;
-import com.todo.backend.todo.modal.Todo;
+import com.todo.backend.Service.impl.TodoServiceImpl;
+import com.todo.backend.modal.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

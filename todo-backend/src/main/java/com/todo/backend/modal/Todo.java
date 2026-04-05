@@ -1,4 +1,4 @@
-package com.todo.backend.todo.modal;
+package com.todo.backend.modal;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
