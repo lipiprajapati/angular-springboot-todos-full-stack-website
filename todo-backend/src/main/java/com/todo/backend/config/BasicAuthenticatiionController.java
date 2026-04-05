@@ -1,4 +1,4 @@
-package com.todo.backend.basicAuth;
+package com.todo.backend.config;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
