@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.todo.backend.modal.Todo;
+import com.todo.backend.model.Todo;
 import com.todo.backend.Service.TodoService;
 import org.springframework.stereotype.Service;
 

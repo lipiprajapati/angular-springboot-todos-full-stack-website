@@ -1,6 +1,6 @@
 package com.todo.backend.Service;
 
-import com.todo.backend.modal.Todo;
+import com.todo.backend.model.Todo;
 
 import java.util.List;
 

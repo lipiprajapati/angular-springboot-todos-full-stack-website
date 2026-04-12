@@ -1,8 +1,8 @@
 package com.todo.backend.controller;
 
 import com.todo.backend.entity.AuthRequest;
-import com.todo.backend.modal.AuthResponse;
-import com.todo.backend.modal.Response;
+import com.todo.backend.model.AuthResponse;
+import com.todo.backend.model.ApiResponse;
 import com.todo.backend.util.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,13 +23,13 @@ public class AuthController {
     private JWTUtil jwtUtil;
 
     @PostMapping("/authenticate")
-    public ResponseEntity<Response> generateToken(@RequestBody AuthRequest authRequest) {
+    public ResponseEntity<ApiResponse<AuthResponse>> generateToken(@RequestBody AuthRequest authRequest) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()
                 )
         );
         String token = jwtUtil.generateToken(authRequest.getUsername());
-        return ResponseEntity.ok(new Response(new AuthResponse(token), null));
+        return ResponseEntity.ok(ApiResponse.success(new AuthResponse(token)));
 
     }
 }

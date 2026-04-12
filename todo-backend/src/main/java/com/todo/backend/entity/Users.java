@@ -1,17 +1,15 @@
 package com.todo.backend.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.todo.backend.model.Role;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Generated;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 @Data
@@ -21,7 +19,8 @@ public class Users implements UserDetails {
     private Long id;
     private String username;
     private String password;
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     /**
      * Returns the authorities granted to the user. Cannot return <code>null</code>.
@@ -30,7 +29,13 @@ public class Users implements UserDetails {
      */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role));
+        Set<SimpleGrantedAuthority> permissionAuthority = new HashSet<>();
+        permissionAuthority.add(new SimpleGrantedAuthority("ROLE_" + role.name()));
+
+        Set<SimpleGrantedAuthority> authorities = role.getPermissions().stream()
+                        .map(permissions -> new SimpleGrantedAuthority(permissions.name())).collect(Collectors.toSet());
+        permissionAuthority.addAll(authorities);
+        return permissionAuthority;
     }
 
     /**
