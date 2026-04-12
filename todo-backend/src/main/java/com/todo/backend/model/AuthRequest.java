@@ -1,4 +1,4 @@
-package com.todo.backend.entity;
+package com.todo.backend.model;
 
 import lombok.Data;
 

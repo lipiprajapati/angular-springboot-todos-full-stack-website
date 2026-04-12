@@ -1,6 +1,6 @@
 package com.todo.backend.controller;
 
-import com.todo.backend.entity.AuthRequest;
+import com.todo.backend.model.AuthRequest;
 import com.todo.backend.model.AuthResponse;
 import com.todo.backend.model.ApiResponse;
 import com.todo.backend.util.JWTUtil;
