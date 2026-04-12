@@ -1,11 +1,11 @@
-package com.todo.backend.todo.service.impl;
+package com.todo.backend.Service.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.todo.backend.todo.modal.Todo;
-import com.todo.backend.todo.service.TodoService;
+import com.todo.backend.model.Todo;
+import com.todo.backend.Service.TodoService;
 import org.springframework.stereotype.Service;
 
 @Service
